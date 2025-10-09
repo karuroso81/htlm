@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practica con formularios</title>
+</head>
+<body>
+   
+    <form method="post" action="url de destino">
+         <fieldset>
+            <legend>Datos Personales</legend>
+       
+        <p>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required placeholder="Nombre de usuario">
+        </p>
+          </fieldset>
+        <p>
+        <label for="provincia">provincia</label>
+        <select id="provincia" name="provincia" required>
+            <option value="">Seleccione una provincia</option>
+            <option value="Madrid">Madrid</option>
+            <option value="Barcelona">Barcelona</option>
+            <option value="Valencia">Valencia</option>
+            <option value="Sevilla">Sevilla</option>
+            <option value="Murcia">Murcia</option>
+            <option value="Zaragoza">Zaragoza</option>
+            <option value="Bilbao">Bilbao</option>
+            <option value="Las Palmas">Las Palmas</option>
+            <option value="Granada">Granada</option>
+            <option value="Valladolid">Valladolid</option>
+            <option value="Asturias">Asturias</option>
+            <option value="Galicia">Galicia</option >
+        </select>
+        </p>
+        <p>
+        <textarea name=""id="descripcion" cols="30" rows="10" placeholder="Describa su proyecto">    
+        </textarea>
+        </p>
+
+        <p>
+            <button type="button">Normal</button>
+            <button type="reset">Reset</button>
+            <button type="submit">Sumit</button>
+            <button disabled="disabled">Desactivado</button>
+        </p>
+        <p>
+            <input type="checkbox" id="terminos" name="terminos" required>
+            <label for="terminos">Acepto los términos y condiciones</label>
+        </p>
+    </form>
+  
+</body>
+</html>
