@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table {
+        border-collapse: collapse;
+      }
+
+      th,
+      td {
+        border: 1px solid black;
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <!--Pagina de colocacion de 3 imagenes en la pagina-->
+  <body>
+    <div style="text-align: center">
+      <a href="https://lenguajehtml.com/html/" target="_blank"
+        ><img src="/img/html5.png"
+      /></a>
+      <a
+        href="https://lenguajecss.com/css/introduccion/que-es-css/"
+        target="_blank"
+        ><img src="/img/css3.png" width="225px"
+      /></a>
+      <br />
+      <a href="https://www.google.com/?hl=es" target="_blank"
+        ><img src="/img/chrome.jpeg"
+      /></a>
+    </div>
+
+    <hr />
+    <h2>Ejercicio práctico con listas</h2>
+
+    <!--Pagina de orden de listas que se pueden hacer-->
+    <ol type="i">
+      <li>General Aviation</li>
+      <ol type="a">
+        <li>Airplane</li>
+        <li>Helicopter</li>
+        <li>Glider</li>
+      </ol>
+      <li>Commercial Aviation</li>
+      <ul style="list-style-type: disc">
+        <!--El "style="list-style-type: disc;"" sirve para darle estilos a la lista-->
+        <li>Private Jet</li>
+        <li>Commercial Jet</li>
+        <li>Airliner</li>
+      </ul>
+    </ol>
+
+    <!--   <ul style="list-style-type: disc;">Elemento</ul>       lista con puntos -->
+    <!-- <ul style="list-style-type: circle;">Elemento</ul>     círculos vacíos -->
+    <!-- <ul style="list-style-type: square;">Elemento</ul>     cuadrados -->
+    <!-- <ol style="list-style-type: decimal;">Elemento</ol>    numerada -->
+    <!-- <ol style="list-style-type: upper-roman;">Elemento</ol>  números romanos -->
+    <!-- <ol style="list-style-type: lower-alpha;">Elemento</ol>  letras -->
+
+    <ul style="list-style-type: square">
+      <li>A</li>
+      <ul style="list-style-type: circle">
+        <li>B</li>
+        <ol style="list-style-type: decimal">
+          <li>C</li>
+          <li>D</li>
+        </ol>
+        <li>E</li>
+        <ul style="list-style-type: lower-alpha">
+          <li>F</li>
+          <li>G</li>
+        </ul>
+      </ul>
+      <li>B</li>
+    </ul>
+    <hr />
+
+    <h2>Ejercicio práctico con Tablas</h2>
+
+    <table>
+      <caption></caption>
+      <thead>
+        <tr>
+          <th></th>
+          <th colspan="3"><img src="/img/120_ipod.png" /></th>
+          <th colspan="2"><img src="img/100_ipod.png" width="100px" /></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>Capacidad</th>
+          <td>
+            <p>2GB</p>
+          </td>
+          <td>
+            <p>4GB</p>
+          </td>
+          <td>
+            <p>8GB</p>
+          </td>
+          <td>
+            <p>32GB</p>
+          </td>
+          <td>
+            <p>2GB</p>
+          </td>
+        </tr>
+        <tr>
+          <th>Colores</th>
+          <th>Blanco</th>
+          <td>
+            <ul>
+              <li>Negro</li>
+              <li>Rosa</li>
+              <li>Dorado</li>
+            </ul>
+          </td>
+          <th>Negro</th>
+          <td colspan="2">
+            <ul>
+              <li>Negro</li>
+              <li>Blanco</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <th>Pantalla</th>
+          <th colspan="3">3 pulgadas</th>
+          <th colspan="2">7 pulgadas</th>
+        </tr>
+        <tr>
+          <th rowspan="2">Tiempo de Carga</th>
+          <th colspan="3" rowspan="2">1 hora</th>
+          <th colspan="2">5 horas</th>
+        </tr>
+        <tr>
+          <th colspan="2">30 minutos para 75%</th>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
