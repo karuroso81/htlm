@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Formulario - Ejercicio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  :root{
+    --panel-green:#aef3a9;   /* Datos Personales */
+    --panel-blue:hsl(201, 68%, 76%);    /* Otros datos */
+    --panel-purple:#c19ae9;  /* Competencias */
+    --border:#5a5a5a;
+    --legend-bg:#fff;
+    --legend-text:#000;
+    --label:#000;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; padding:18px;
+    font-family:Segoe UI, Tahoma, Arial, sans-serif;
+    background:#f0f0f0;
+    color:#000;
+  }
+  form{
+    max-width:900px;
+    margin:0 auto;
+  }
+  fieldset{
+    border:1px solid var(--border);
+    border-radius:2px;
+    margin:0 0 16px 0;
+    padding:12px 12px 14px;
+    background:#fff;
+  }
+  fieldset.panel-green{background:var(--panel-green)}
+  fieldset.panel-blue{background:var(--panel-blue)}
+  fieldset.panel-purple{background:var(--panel-purple)}
+  legend{
+    padding:2px 8px;
+    border:1px solid var(--border);
+    background:var(--legend-bg);
+    color:var(--legend-text);
+    font-weight:700;
+    font-size:14px;
+  }
+
+ 
+  .row{display:flex; flex-wrap:wrap; gap:12px; align-items:center; margin-bottom:10px}
+  .row > label{min-width:110px}
+  .row .small-label{min-width:auto; margin-right:6px}
+  input[type="text"],input[type="email"],input[type="tel"],input[type="date"],select,textarea{
+    border:1px solid #888; border-radius:2px; background:#fff; color:#000;
+    padding:4px 6px; font-size:14px;
+  }
+  input[type="date"]{min-width:160px}
+  textarea{width:100%; min-height:150px; resize:vertical; background:#e6f3fb}
+  .grow{flex:1 1 220px}
+  .half{flex:1 1 300px}
+  .third{flex:1 1 220px}
+  .inline{display:inline-flex; align-items:center; gap:10px}
+  .spacer{flex:1}
+
+  
+  .skills-grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap:40px;
+    row-gap:14px;
+  }
+  .skill{
+    display:flex; align-items:center; gap:10px;
+  }
+  .skill label{min-width:110px}
+  input[type="range"]{width:220px}
+
+  
+  .actions{
+    display:flex; gap:10px; align-items:center; margin-top:10px;
+  }
+  button{
+    font-size:14px; padding:6px 10px; border:1px solid #888; background:#e6e6e6; cursor:pointer;
+  }
+  button.primary{background:#dcdcdc}
+  button:disabled{opacity:.6; cursor:not-allowed; background:#e0e0e0}
+  @media (max-width:720px){
+    .skills-grid{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<form action="#" method="post">
+
+  <!-- DATOS PERSONALES -->
+  <fieldset class="panel-green">
+    <legend>Datos Personales</legend>
+
+    <div class="row">
+      <label for="apellidos"class="small-label">Apellidos:</label>
+      <input class="small-label" id="apellidos" name="apellidos" type="text" placeholder="Insertar nombre">
+
+      <label for="nombre" class="small-label">Nombre:</label>
+      <input class="small-label" id="nombre" name="nombre" type="text" placeholder="Insertar apellidos">
+
+      <label for="email" class="small-label">Email:</label>
+      <input class="small-label" id="email" name="email" type="email" placeholder="Correo electrónico">
+    </div>
+
+    <div class="row">
+      <label for="telefono"class="small-label">Telefono:</label>
+      <input class="small-label" id="telefono" name="telefono" type="tel" placeholder="Nº de contacto">
+
+      <label for="dni" class="small-label">DNI:</label>
+      <input class="small-label" id="dni" name="dni" type="text" placeholder="Nº de documento">
+
+      <label for="fecha" class="small-label">Fecha de Nacimiento:</label>
+      <input class="small-label" id="fecha" name="fecha" type="date" placeholder="dd/mm/aaaa">
+    </div>
+
+    <div class="row">
+      <label for="provincia"class="small-label">Provincia</label>
+      <select class="small-label"id="provincia" name="provincia" class="third">
+        <option>-- Selecciona --</option>
+        
+        <option>A Coruña</option><option>Álava</option><option>Albacete</option>
+      
+        <option>Burgos</option><option>Cáceres</option><option>Cádiz</option>
+      
+        <option>Granada</option><option>Guadalajara</option><option>Gipuzkoa</option>
+      
+        <option>León</option><option>Lleida</option><option>Lugo</option><option>Madrid</option>
+       
+        <option>Soria</option><option>Tarragona</option><option>Teruel</option><option>Toledo</option>
+    
+        <option>Zamora</option><option>Zaragoza</option>
+      </select>
+
+      <span class="small-label">Sexo:</span>
+      <span class="inline">
+        <label><input type="radio" name="sexo" value="Hombre"> Hombre</label>
+        <label><input type="radio" name="sexo" value="Mujer"> Mujer</label>
+      </span>
+    </div>
+
+    <div class="row">
+      <span class="small-label">Dispositivos Preferido:</span>
+      <span class="inline">
+        <label><input type="checkbox" name="disp" value="PC"> PC</label>
+        <label><input type="checkbox" name="disp" value="Tableta"> Tableta</label>
+        <label><input type="checkbox" name="disp" value="Movil"> Móvil</label>
+      </span>
+
+      <label for="ide" class="small-label" style="margin-left:20px">IDE Preferido:</label>
+      <input class="small-label"id="ide" name="ide" type="text" class="third">
+      <div class="spacer"></div>
+    </div>
+  </fieldset>
+
+  <!-- OTROS DATOS -->
+  <fieldset class="panel-blue">
+    <legend>Otros datos de interés</legend>
+    <textarea name="otros" placeholder="Indica cualquier otra información que consideres relevante"></textarea>
+  </fieldset>
+
+  <!-- COMPETENCIAS -->
+  <fieldset class="panel-purple">
+    <legend>Competencias de Programación:</legend>
+
+    <div class="skills-grid">
+      <div class="skill">
+        <label for="nivelJava">Nivel de Java:</label>
+        <input id="nivelJava" name="nivelJava" type="range" min="0" max="10" value="0">
+      </div>
+      <div class="skil">
+        <label for="nivelPython">Nivel de Python:</label>
+        <input id="nivelPython" name="nivelPython" type="range" min="0" max="10" value="0">
+      </div>
+      <div class="skill">
+        <label for="nivelHTML">Nivel de HTML:</label>
+        <input id="nivelHTML" name="nivelHTML" type="range" min="0" max="10" value="0">
+      </div>
+      <div class="skill">
+        <label for="nivelCSS">Nivel de CSS:</label>
+        <input id="nivelCSS" name="nivelCSS" type="range" min="0" max="10" value="0">
+      </div>
+    </div>
+  </fieldset>
+
+  <!-- ACCIONES -->
+  <div class="actions">
+    <button type="button" class="primary" id="btnActivado">Activado</button>
+    <button type="reset">Borrar Datos</button>
+    <button type="submit">Enviar Solicitud</button>
+    <button type="button" id="btnDesactivado" disabled>Desactivado</button>
+  </div>
+
+</form>
+
+</body>
+</html>

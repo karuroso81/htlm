@@ -1,66 +1,34 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>practica con formularios</title>
+<meta charset="UTF-8">
+<title>Conversor Millas ↔ Kilómetros</title>
+<style>
+    body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
+    input, select, button { margin: 8px; padding: 10px; font-size: 16px; }
+    .resultado { margin-top: 20px; font-size: 18px; font-weight: bold; }
+</style>
 </head>
 <body>
-   
-    <form method="post" action="url de destino">
-         <fieldset>
-            <legend>Datos Personales</legend>
-       
-        <p>
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" required placeholder="Nombre de usuario">
-        </p>
-          </fieldset>
-        <p>
-        <label for="provincia">provincia</label>
-        <select id="provincia" name="provincia" required>
-            <option value="">Seleccione una provincia</option>
-            <option value="Madrid">Madrid</option>
-            <option value="Barcelona">Barcelona</option>
-            <option value="Valencia">Valencia</option>
-            <option value="Sevilla">Sevilla</option>
-            <option value="Murcia">Murcia</option>
-            <option value="Zaragoza">Zaragoza</option>
-            <option value="Bilbao">Bilbao</option>
-            <option value="Las Palmas">Las Palmas</option>
-            <option value="Granada">Granada</option>
-            <option value="Valladolid">Valladolid</option>
-            <option value="Asturias">Asturias</option>
-            <option value="Galicia">Galicia</option >
-        </select>
-        </p>
-        <p>
-        <textarea name=""id="descripcion" cols="30" rows="10" placeholder="Describa su proyecto">    
-        </textarea>
-        </p>
 
-        <p>
-            <button type="button">Normal</button>
-            <button type="reset">Reset</button>
-            <button type="submit">Sumit</button>
-            <button disabled="disabled">Desactivado</button>
-        </p>
-        <p>
-            <input type="checkbox" id="terminos" name="terminos" required>
-            <label for="terminos">Acepto los términos y condiciones</label>
-        </p>
+    <h1>Conversor Millas ↔ Kilómetros</h1>
 
-        <p>
-            <input type="radio" id="masculino" name="sexo" value="masculino" checked>
-            <label for="masculino">Masculino</label>
-            <input type="radio" id="femenino" name="sexo" value="femenino">
-            <label for="femenino">Femenino</label>
-        </p>
-        <p>
-            <label for="foto">Subir una imagen:</label>
-            <input type="file" id="foto" name="foto">
-        </p>
+    <form action="ConversorController" method="post">
+        <input type="text" name="valor" placeholder="Introduce el valor" required
+            value="${param.valor}"><br>
+        <select name="tipo">
+            <option value="millasKm" ${param.tipo == 'millasKm' ? 'selected' : ''}>Millas → Kilómetros</option>
+            <option value="kmMillas" ${param.tipo == 'kmMillas' ? 'selected' : ''}>Kilómetros → Millas</option>
+        </select><br>
+        <button type="submit">Convertir</button>
     </form>
-  
+
+    <!-- Mostramos el resultado si existe -->
+    <div class="resultado">
+        ${mensaje}
+    </div>
+
 </body>
 </html>
