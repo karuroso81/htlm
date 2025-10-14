@@ -1,0 +1,92 @@
+/* Centra en la página en texto del título */
+h1 {
+  text-align: center;
+}
+/* Da a todas las imágenes el mismo tamaño 50x50px */
+img {
+  width: 50px;
+  height: 50px;
+}
+/* Primera columna fondo rojo y letra blanca */
+.primera {
+  background-color: red;
+  color: white;
+}
+/* Fila de capacidad con fondo gris y letra grande */
+#fila .gb {
+  background-color: grey;
+  font-size: 2em;
+  text-align: center;
+}
+/* Elementos de lista en rojo dentro de la fila de colores */
+#listas li {
+  color: red;
+}
+/* Bordes y centrado de tabla */
+table {
+  border-collapse: collapse;
+  margin: 0 auto;
+  width: 50%;
+}
+td, th {
+  border: 1px solid black;
+}
+/* Fondo azul solo en la tabla de productos (no en el horario) */
+/* Fondo azul solo en la tabla de productos para celdas con colspan 2 o 3 */
+#tabla-productos [colspan="2"],
+#tabla-productos [colspan="3"] {
+  background-color: blue;
+}
+
+
+/* Celda "5 horas" amarilla con padding y centrado */
+#tabla-productos #cinco {
+  background-color: yellow;  /* más específico que el azul */
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+  vertical-align: middle;
+}
+/* Fondo verde en primera columna (horas) */
+tbody tr td:first-child {
+  background-color: green;
+}
+/* Celda de recreo en amarillo */
+tbody tr:nth-child(3) th:nth-child(2) {
+  background-color: yellow;
+}
+/* Enlaces sin subrayar y con colores según estado */
+a {
+  text-decoration: none;
+}
+a:link {
+  color: green;
+}
+a:visited {
+  color: red;
+}
+/* Hover solo en la columna del viernes de la tabla de horario */
+#tabla-horario tr th:last-child:hover,
+#tabla-horario tr td:last-child:hover {
+  font-size: 2em;
+}
+/* Primera letra de los días con tamaño doble */
+thead tr th::first-letter {
+  font-size: 2em;
+}
+/* Campos obligatorios con borde rojo y padding */
+input:required {
+  border: 1px solid red;
+  padding: 10px;
+}
+/* Asterisco rojo detrás de las etiquetas */
+label::after {
+  color: red;
+  content: "*";
+}
+form {
+  border-collapse: collapse;
+  margin: 0 auto;
+  width: 50%;
+}
+
