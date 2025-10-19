@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" type="text/css" />
+    <title>Gua de Maqueitación Web CSS</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Guía Interactiva de Maquetación CSS</h1>
+        <p class="subtitle">
+          Todos los conceptos esenciales con ejemplos visuales
+        </p>
+      </header>
+
+      <div class="content">
+        <!-- DISPLAY -->
+        <div class="section">
+          <h2 class="section-title">1. Display</h2>
+
+          <h3>Display: Inline</h3>
+          <div class="demo-box">
+            <span class="display-inline">Elemento 1</span>
+            <span class="display-inline">Elemento 2</span>
+            <span class="display-inline">Elemento 3</span>
+            <p style="margin-top: 15px">
+              Los elementos inline fluyen en línea, no aceptan width/height
+            </p>
+          </div>
+          <div class="code">
+            <span class="highlight">display</span>: inline;
+          </div>
+
+          <h3>Display: Inline-Block</h3>
+          <div class="demo-box">
+            <div class="display-inline-block">Box 1</div>
+            <div class="display-inline-block">Box 2</div>
+            <div class="display-inline-block">Box 3</div>
+            <p style="margin-top: 15px">
+              Fluyen en línea pero aceptan width/height
+            </p>
+          </div>
+          <div class="code">
+            <span class="highlight">display</span>: inline-block;
+          </div>
+
+          <h3>Display: Block</h3>
+          <div class="demo-box">
+            <div class="display-block">Bloque 1</div>
+            <div class="display-block">Bloque 2</div>
+            <div class="display-block">Bloque 3</div>
+            <p style="margin-top: 15px">
+              Ocupan todo el ancho disponible y fuerzan salto de línea
+            </p>
+          </div>
+          <div class="code"><span class="highlight">display</span>: block;</div>
+        </div>
+
+        <!-- LAYOUT -->
+        <div class="section">
+          <h2 class="section-title">2. Layout (Diseño)</h2>
+
+          <h3>Fixed (Fijo)</h3>
+          <div class="layout-fixed">
+            <strong>Ancho fijo: 600px</strong><br />
+            No cambia con el tamaño de la ventana
+          </div>
+          <div class="code"><span class="highlight">width</span>: 600px;</div>
+
+          <h3>Elastic (Elástico)</h3>
+          <div class="layout-elastic">
+            <strong>Ancho: 80%</strong><br />
+            Se adapta proporcionalmente al contenedor
+          </div>
+          <div class="code"><span class="highlight">width</span>: 80%;</div>
+
+          <h3>Fluid (Fluido)</h3>
+          <div class="layout-fluid">
+            <strong>Ancho: 100%</strong><br />
+            Ocupa todo el espacio disponible
+          </div>
+          <div class="code"><span class="highlight">width</span>: 100%;</div>
+
+          <h3>Hybrid (Híbrido)</h3>
+          <div class="layout-hybrid">
+            <strong>max-width: 700px + width: 90%</strong><br />
+            Combina lo mejor: fluido hasta un límite máximo
+          </div>
+          <div class="code">
+            <span class="highlight">max-width</span>: 700px;<br /><span
+              class="highlight"
+              >width</span
+            >: 90%;
+          </div>
+        </div>
+
+        <!-- BOX-SIZING -->
+        <div class="section">
+          <h2 class="section-title">3. Box-Sizing: Border-Box</h2>
+          <div class="demo-box">
+            <p
+              style="
+                background: #e3f2fd;
+                padding: 20px;
+                border: 5px solid #2196f3;
+                margin-bottom: 10px;
+              "
+            >
+              <strong>Con box-sizing: border-box</strong><br />
+              El width incluye padding y border. ¡Mucho más fácil de calcular!
+            </p>
+            <p>
+              Este proyecto usa <strong>border-box</strong> para todos los
+              elementos (*)
+            </p>
+          </div>
+          <div class="code">
+            * {<br />&nbsp;&nbsp;<span class="highlight">box-sizing</span>:
+            border-box;<br />}
+          </div>
+        </div>
+
+        <!-- CENTRADO -->
+        <div class="section">
+          <h2 class="section-title">4. Técnicas de Centrado</h2>
+
+          <h3>Centrado Horizontal - Elementos Inline</h3>
+          <div class="center-horizontal-inline">
+            <span class="centered-inline">Elemento centrado</span>
+          </div>
+          <div class="code">
+            <span class="highlight">text-align</span>: center;
+          </div>
+
+          <h3>Centrado Horizontal - Elementos Block</h3>
+          <div class="demo-box">
+            <div class="center-horizontal-block">
+              Bloque centrado con margin auto
+            </div>
+          </div>
+          <div class="code">
+            <span class="highlight">margin</span>: 0 auto;<br /><span
+              class="highlight"
+              >width</span
+            >: 300px;
+          </div>
+
+          <h3>Centrado Vertical - Flexbox</h3>
+          <div class="center-vertical-container">
+            <div class="centered-content">
+              Centrado vertical y horizontal con Flexbox
+            </div>
+          </div>
+          <div class="code">
+            <span class="highlight">display</span>: flex;<br /><span
+              class="highlight"
+              >align-items</span
+            >: center;<br /><span class="highlight">justify-content</span>:
+            center;
+          </div>
+        </div>
+
+        <!-- POSITION -->
+        <div class="section">
+          <h2 class="section-title">5. Position</h2>
+
+          <div class="pos-sticky-info">
+            <strong> Sticky en acción:</strong> El header de esta página usa
+            <code>position: sticky</code> - se mantiene visible al hacer scroll
+          </div>
+
+          <div class="position-demo">
+            <div class="pos-static">
+              <strong>Static</strong> (por defecto)<br />
+              Flujo normal del documento
+            </div>
+            <div class="pos-relative">
+              <strong>Relative</strong><br />
+              Desplazado: left: 30px, top: 10px
+            </div>
+            <div class="pos-absolute">
+              <strong>Absolute</strong><br />
+              top: 20px, right: 20px
+            </div>
+            <p style="margin: 10px; padding: 10px; background: white">
+              <strong>Fixed:</strong> Mira el botón flotante en la esquina
+              inferior derecha
+            </p>
+          </div>
+
+          <div class="code">
+            <span class="highlight">position</span>: static; /* Por defecto
+            */<br />
+            <span class="highlight">position</span>: relative; /* Relativo a su
+            posición original */<br />
+            <span class="highlight">position</span>: absolute; /* Relativo al
+            ancestro positioned */<br />
+            <span class="highlight">position</span>: fixed; /* Relativo al
+            viewport */<br />
+            <span class="highlight">position</span>: sticky; /* Híbrido
+            relative/fixed */
+          </div>
+        </div>
+
+        <!-- COLUMNAS -->
+        <div class="section">
+          <h2 class="section-title">6. Columnas CSS</h2>
+          <div class="demo-box">
+            <div class="columns-demo">
+              <p>
+                Las columnas CSS permiten distribuir contenido automáticamente
+                en múltiples columnas, similar a un periódico. Este texto se
+                distribuye en 3 columnas con un espacio de 30px entre ellas.
+              </p>
+              <p>
+                La propiedad column-rule añade una línea divisoria entre
+                columnas, haciendo la separación más visual y profesional. Es
+                como tener un border entre columnas.
+              </p>
+              <p>
+                El contenido fluye naturalmente de una columna a otra, y es
+                responsive por naturaleza. Si reduces el ancho de la ventana,
+                las columnas se ajustan automáticamente.
+              </p>
+            </div>
+          </div>
+          <div class="code">
+            <span class="highlight">column-count</span>: 3;<br />
+            <span class="highlight">column-gap</span>: 30px;<br />
+            <span class="highlight">column-rule</span>: 3px solid #667eea;
+          </div>
+        </div>
+
+        <!-- FLOTANTES -->
+        <div class="section">
+          <h2 class="section-title">7. Flotantes (Float)</h2>
+          <div class="float-container">
+            <div class="float-left">
+              <strong>Float: Left</strong><br />
+              Este elemento flota a la izquierda. El contenido fluye alrededor
+              de él.
+            </div>
+            <div class="float-right">
+              <strong>Float: Right</strong><br />
+              Este elemento flota a la derecha. Perfecto para layouts de dos
+              columnas.
+            </div>
+            <div class="clear-both">
+              <strong>Clear: Both</strong><br />
+              Este elemento limpia los floats anteriores y aparece debajo de
+              ambos.
+            </div>
+          </div>
+          <p
+            style="
+              background: #fff3e0;
+              padding: 15px;
+              border-radius: 5px;
+              margin-top: 15px;
+            "
+          >
+            <strong>🔧 Clearfix Hack aplicado:</strong> El contenedor usa
+            <code>::after</code> con <code>clear: both</code> para contener los
+            elementos flotantes correctamente.
+          </p>
+          <div class="code">
+            .float-left { <span class="highlight">float</span>: left; }<br />
+            .float-right { <span class="highlight">float</span>: right; }<br />
+            .clear-both { <span class="highlight">clear</span>: both; }<br /><br />
+            /* Clearfix Hack */<br />
+            .float-container::after {<br />
+            &nbsp;&nbsp;<span class="highlight">content</span>: "";<br />
+            &nbsp;&nbsp;<span class="highlight">display</span>: table;<br />
+            &nbsp;&nbsp;<span class="highlight">clear</span>: both;<br />
+            }
+          </div>
+        </div>
+
+        <div
+          style="
+            text-align: center;
+            padding: 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 10px;
+            margin-top: 30px;
+          "
+        >
+          <h3>¡Todos los conceptos de maquetación CSS aplicados!</h3>
+          <p>Si quieres ver el comportamiento responsive modifica la ventana</p>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="pos-fixed-demo"
+      onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
+    >
+      ↑ Subir
+    </div>
+  </body>
+</html>
