@@ -1,0 +1,60 @@
+/* Reset básico */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: #222;
+  background: #fff;
+}
+
+/* Contenedor centrado como en la captura */
+.contenedor {
+  width: min(1200px, 92%);
+  margin: 40px auto;
+}
+
+/* Barra superior oscura con el título */
+.cabecera {
+  background: #3a3a3a;         /* gris oscuro */
+  color: #fff;
+  padding: 16px 20px;
+  border: 1px solid #2e2e2e;
+}
+
+.cabecera h1 {
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: .2px;
+}
+
+/* Franja clara y cajas de menú usando FLEXBOX */
+.menu {
+  display: flex;
+  gap: 22px;                    /* separación entre cajas (como en la imagen) */
+  background: #e5e5e5;          /* franja gris clara detrás de las cajas */
+  border: 1px solid #d6d6d6;
+  border-top: none;             /* pegado a la cabecera */
+  padding: 8px 14px;            /* deja un poco de aire a la izquierda/derecha */
+}
+
+/* Cada enlace como “caja” */
+.menu a {
+  flex: 1;                      /* todas las cajas con el mismo ancho */
+  text-align: center;
+  text-decoration: none;
+  color: #333;
+  background: #ededed;          /* gris de las cajas */
+  border: 1px solid #cfcfcf;
+  padding: 8px 10px;
+  font-size: 12px;
+  line-height: 1;
+}
+
+/* Pequeña interacción opcional */
+.menu a:hover {
+  filter: brightness(0.96);
+  border-color: #bdbdbd;
+}
+.tarea-naranja {
+  color: hwb(26 5% 11%);
+}
