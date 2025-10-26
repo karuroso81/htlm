@@ -1,0 +1,63 @@
+/* Reset básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  background: #fff;
+  color: #222;
+}
+
+.contenedor {
+  width: 90%;
+  max-width: 1100px;
+  margin: 40px auto;
+}
+
+/* ---------- TÍTULO ---------- */
+.titulo-tarea {
+  color: #d48c28; /* naranja */
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+/* ---------- BLOQUE ---------- */
+.bloque {
+  background: hsl(0, 5%, 92%); /* gris oscuro de fondo */
+  padding: 10px;
+  border: 1px solid #444;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* Cada fila de números */
+.fila {
+  display: flex;
+  justify-content: space-between;
+  gap: 6px;
+}
+
+/* Cada caja individual */
+.item {
+  background: #999; /* gris claro */
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  padding: 6px 0;
+  flex: 1;                /* todas iguales */
+  border: 1px solid #888; /* separador fino */
+}
+
+/* Espaciado más homogéneo */
+.item:not(:last-child) {
+  margin-right: 3px;
+}

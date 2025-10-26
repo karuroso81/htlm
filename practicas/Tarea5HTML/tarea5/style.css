@@ -1,0 +1,100 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  color: #222;
+  background-color: #fff;
+}
+
+.contenedor {
+  width: 90%;
+  max-width: 1200px;
+  margin: 40px auto;
+}
+
+/* ---------- TITULOS ---------- */
+.titulo-tarea {
+  color: #d48c28;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+/* ---------- CABECERA OSCURA ---------- */
+.cabecera {
+  background: #3a3a3a;
+  color: #fff;
+  padding: 15px 20px;
+  border: 1px solid #2e2e2e;
+}
+
+.cabecera h1 {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+/* ---------- GALERIA ---------- */
+.galeria {
+  background: #dcdcdc;       /* fondo gris claro general */
+  border: 1px solid #bcbcbc;
+  border-top: none;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;         /* todas en una fila */
+  gap: 10px;
+}
+
+/* ---------- TARJETAS ---------- */
+.card {
+  background: #f5f5f5;
+  border: 1px solid #bdbdbd;
+  flex: 1 1 22%;             /* 4 columnas iguales */
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px;
+}
+
+/* Imagen a la izquierda */
+.card img {
+  width: 80px;
+  height: 193px;
+  object-fit: cover;
+  border: 1px solid #aaa;
+}
+
+/* Texto a la derecha */
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.info h3 {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.info p {
+  font-size: 12px;
+  color: #333;
+  text-align: justify;
+  line-height: 1.3;
+}
+
+/* Pequeño efecto hover */
+.card:hover {
+  transform: scale(1.02);
+  transition: transform 0.25s ease;
+}

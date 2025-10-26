@@ -1,0 +1,68 @@
+/* Reset básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  color: #222;
+  background-color: #fff;
+}
+
+.contenedor {
+  width: min(1200px, 95%);
+  margin: 40px auto;
+}
+
+/* ---------- TITULOS ---------- */
+.titulo-tarea {
+  color: #d48c28; /* naranja */
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.subtitulo {
+  text-align: center;
+  font-weight: 600;
+  margin: 30px 0 25px 0;
+}
+
+/* ---------- GALERÍA FLEX ---------- */
+.galeria {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px; /* espacio entre columnas */
+}
+
+/* Cada columna es una caja flex vertical */
+.columna {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Imágenes dentro de las columnas */
+.columna img {
+  display: block;
+  width: 250px;
+  object-fit:cover;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  transition: transform 0.3s ease;
+}
+
+/* Tamaños variados como en el ejemplo */
+.columna:nth-child(1) img:nth-child(1) { height: 350px; }
+.columna:nth-child(1) img:nth-child(2) { height: 150px; }
+
+.columna:nth-child(2) img:nth-child(1) { height: 510px; }
+
+.columna:nth-child(3) img:nth-child(1) { height: 200px; }
+.columna:nth-child(3) img:nth-child(2) { height: 150px; }
+.columna:nth-child(3) img:nth-child(3) { height: 140px; }
+
+.columna:nth-child(4) img:nth-child(1) { height: 510px; }
