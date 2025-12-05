@@ -96,7 +96,8 @@ img {
   border-radius: 1rem 1rem 0 0;
   width: 100%;
   height: 180px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 figcaption {
@@ -126,6 +127,7 @@ figcaption .flag-container span {
 }
 figcaption .btn {
   display: block;
+  width: -moz-fit-content;
   width: fit-content;
   margin: 0.5rem auto;
   padding: 0.3rem 0.8rem;
@@ -189,6 +191,4 @@ nav .btn-normal.btn {
   color: white;
   font-size: 0.8rem;
   padding: 0.3rem 0.6rem;
-}
-
-/*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=styles.css.map */
