@@ -1,0 +1,124 @@
+body{
+    margin: 20px;
+}
+
+.container-fluid{
+    text-align: center;
+    height: 100vh;
+    
+}
+.row{
+    justify-content: center;
+    align-items: center;
+}
+
+div.container-fluid div.row div {
+    height: 200px;
+    
+}
+
+.red{
+    background-color: red;
+}
+.darkblue{
+    background-color: darkblue;
+}
+.blue{
+    background-color: blue;
+}
+.yellow{
+    background-color: yellow;
+}
+.black{
+    background-color: black;
+}
+.green{
+    background-color: green;
+}
+
+/* Reglas para los iconos SVG */
+.icon{
+    width:80px;
+    height:auto;
+    display:block;
+}
+
+/* Tamaño específico para Naruto (ajustable) */
+.icon.naruto{
+    width:80%;            /* ocupar el 80% del ancho de la columna */
+    max-width:220px;      /* pero no mayor que 220px */
+    height:auto;
+    display:block;
+}
+
+/* Evitar que el icono salga del contenedor y dar espacio */
+.col-md.green, .col.green{
+    padding:10px;
+    box-sizing:border-box;
+    overflow:hidden;
+    position:relative;
+}
+
+/* Asegurar que el icono se ajuste al contenedor sin salirse */
+.col-md.green .icon,
+.col.green .icon{
+    display:block;
+    max-width:100%;
+    max-height:calc(100% - 20px); /* considera padding */
+    width:auto;
+    height:auto;
+    object-fit:contain;
+    margin:0 auto;
+}
+
+/* Forzar Naruto blanco sobre fondo verde si se usa <img> */
+.green .icon.naruto{
+    filter: brightness(0) invert(1);
+    max-width:100%;
+}
+/* Forzar contraste en fondos oscuros/coloreados para iconos monocromos */
+.black .icon.monochrome use,
+.black .icon.monochrome path,
+.red .icon.monochrome use,
+.red .icon.monochrome path,
+.green .icon.monochrome use,
+.green .icon.monochrome path{
+    fill: #ffffff !important;
+}
+
+/* Forzar Naruto en blanco sobre fondo negro o verde */
+.black .icon.naruto use,
+.black .icon.naruto path,
+.green .icon.naruto use,
+.green .icon.naruto path{
+    fill: #ffffff !important;
+}
+
+/* Asegurar que los SVG escalan correctamente dentro de la columna */
+.col.d-flex .icon{
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/* Media queries para hacer los iconos responsivos */
+@media (max-width: 480px) {
+    .icon{ width:48px; }
+    .icon.naruto{ width:70%; max-width:120px; }
+    .col-md.green, .col.green{ padding:6px; }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .icon{ width:60px; }
+    .icon.naruto{ width:75%; max-width:160px; }
+}
+
+@media (min-width: 769px) and (max-width: 1023px) {
+    .icon{ width:72px; }
+    .icon.naruto{ width:80%; max-width:200px; }
+}
+
+@media (min-width: 1024px) {
+    .icon{ width:80px; }
+    .icon.naruto{ width:80%; max-width:220px; }
+}
+
